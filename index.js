@@ -19,6 +19,12 @@ mongoose.connect(process.env.MONGODB_URI, {
 }).then(() => console.log('MongoDB connected...'))
   .catch(err => console.log('Failed to connect to MongoDB', err));
 
+
+app.get('/', async(req,res)=>{
+   
+    res.send("backend apis runnings");
+});
+
 // Add Todo
 app.post('/todos', async (req, res) => {
     try {
